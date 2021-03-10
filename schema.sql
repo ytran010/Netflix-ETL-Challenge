@@ -1,3 +1,10 @@
+DROP table if exists relations
+DROP table if exists countries
+DROP table if exists genres
+DROP table if exists actors
+DROP table if exists shows
+
+
 CREATE TABLE actors (
 	id SERIAL PRIMARY KEY,
 	actor VARCHAR(255) NOT NULL 
