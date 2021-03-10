@@ -20,7 +20,7 @@ CREATE TABLE shows (
 	rating VARCHAR(255) NOT NULL,
 	type VARCHAR(255) NOT NULL,
 	date_added VARCHAR(255) NOT NULL,
-	year VARCHAR(255) NOT NULL, 
+	release_year VARCHAR(255) NOT NULL, 
 	description VARCHAR(255) NOT NULL
 );
 	
