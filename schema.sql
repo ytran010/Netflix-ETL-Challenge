@@ -1,3 +1,10 @@
+DROP table if exists relations
+DROP table if exists countries
+DROP table if exists genres
+DROP table if exists actors
+DROP table if exists shows
+
+
 CREATE TABLE actors (
 	id SERIAL PRIMARY KEY,
 	actor VARCHAR(255) NOT NULL 
@@ -27,11 +34,11 @@ CREATE TABLE shows (
 CREATE TABLE relations (
 	show_id VARCHAR(255) NOT NULL,
 	FOREIGN KEY (show_id) REFERENCES shows(show_id), 
-	actor_id VARCHAR(255) NOT NULL,
+	actor_id INTEGER NOT NULL,
 	FOREIGN KEY (actor_id) REFERENCES actors(id),
-	country_id NOT NULL, 
+	country_id INTEGER NOT NULL, 
 	FOREIGN KEY (country_id) REFERENCES countries(id),
-	genre_id NOT NULL, 
+	genre_id INTEGER NOT NULL, 
 	FOREIGN KEY (genre_id) REFERENCES genres(id)
 );
 	
